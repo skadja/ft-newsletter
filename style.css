@@ -1,0 +1,290 @@
+@charset "UTF-8";
+/*
+Author: Stephane
+Author URI: https://dribbble.com/fano
+Description: First+Third Front End Challenge.
+*/
+
+/* Color palette */
+:root {
+    --white: #FFFFFF;
+    --black: #1F1F27;
+    --blue: #4292F4;
+    --light-blue: #EDF5FF;
+    --light-grey: #F4F4F4;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--black);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    background-color: var(--light-grey);
+    text-rendering: optimizeLegibility;
+}
+
+figure,
+img {
+    max-width: 100% !important;
+    height: auto;;
+    margin: 0;
+}
+a:active,
+a:hover,
+a:focus {
+    outline:none !important;
+    box-shadow: none !important;
+    text-decoration:none;
+}
+a,
+.btn,
+.animate {
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+:focus {
+    outline: none !important;
+}
+ul,
+label {
+    margin: 0;
+    padding: 0;
+}
+.text-light-grey {
+    color: var(--light-grey);
+}
+
+/*
+Page
+*/
+
+.content-wrap {
+    width: auto;
+    margin: 50px 30px;
+}
+.box {
+    background-color: var(--white);
+    box-shadow: 0 3px 19px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 3px 19px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 3px 19px rgba(0,0,0,.1);
+}
+.rounded {
+    border-radius: .5rem !important;
+}
+.rounded-bottom {
+    border-bottom-right-radius: .5rem !important;
+    border-bottom-left-radius: .5rem !important;
+}
+
+/* headers */
+.h1 {
+    font-size: 25px;
+}
+.h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* newsletter list */
+ul li.item {
+    list-style: none;
+}
+    ul li.item a {
+        color: inherit;
+    }
+    ul li.item a:hover {
+        background-color: var(--light-grey);
+    }
+    ul li.item a::after {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 400;
+        font-size: 3rem;
+        content: "\f111";
+        color: var(--light-grey);
+        position: absolute;
+        z-index: 100;
+    }
+        ul li.item a:hover::after {
+            color: var(--white);
+        }
+    ul li.item a.active {
+        background-color: var(--light-blue);
+    }
+        ul li.item a.active::after {
+            content: "\f058";
+            color: var(--blue);
+        }
+
+/* form */
+.form {
+    position: sticky;
+    bottom: 0;
+    z-index: 101;
+    width: 100%;
+}
+.form-control {
+    height: calc(2.6em + .75rem + 2px);
+    background-color: var(--light-grey);
+}
+.box-shadow {
+    -webkit-box-shadow: 0 -10px 10px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 -10px 10px rgba(0,0,0,.1);
+    box-shadow: 0 -10px 10px rgba(0,0,0,.1);
+}
+.btn-submit {
+    font-weight: 600;
+    line-height: 2;
+    box-shadow: 0 4px 13px rgba(66,146,244,.46);
+}
+
+
+
+
+
+
+
+
+/*
+------------------------------------------------------
+MEDIA QUERIES
+------------------------------------------------------
+*/
+
+
+/* x-small devices (575px and under) */
+@media (max-width:575px) {
+
+    ul li.item a {
+        position: relative;
+        padding-bottom: 120px !important;
+    }
+    ul li.item a::after {
+        bottom: 25px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width:768px) {
+
+    ul li.item a {
+        position: relative;
+        padding-bottom: 120px !important;
+    }
+    ul li.item a::after {
+        bottom: 25px;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media(min-width:768px) and (max-width:991px) {
+
+    ul li.item a {
+        position: relative;
+        padding-right: 120px !important;
+    }
+    ul li.item a::after {
+        right: 40px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media(min-width:992px) and (max-width:1199px) {
+
+    .content-wrap {
+        width: 960px;
+        margin: 50px auto;
+    }
+
+    ul li.item a {
+        position: relative;
+        padding-right: 120px !important;
+    }
+    ul li.item a::after {
+        right: 40px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+}
+
+/* Xlarge devices (large desktops, 1200px and up) */
+@media(min-width:1200px) and (max-width:1439px) {
+
+    .content-wrap {
+        width: 1140px;
+        margin: 50px auto;
+    }
+
+    ul li.item a {
+        position: relative;
+        padding-right: 120px !important;
+    }
+    ul li.item a::after {
+        right: 40px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+}
+
+/* XXlarge devices (large desktops, 1440px and up) */
+@media(min-width:1440px) {
+
+    .content-wrap {
+        width: 1380px;
+        margin: 50px auto;
+    }
+
+    ul li.item a {
+        position: relative;
+        padding-right: 120px !important;
+    }
+    ul li.item a::after {
+        right: 40px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+}
+
+
+/* print version */
+@media print {
+    body {
+        width:100%;
+        background: var(--white);
+        color: var(--black);
+    }
+    .no-print {
+        display:none;
+    }
+    .for-print {
+        display:block;
+    }
+}

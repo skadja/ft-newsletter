@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>First+Third Front End Challenge</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <main id="site-content" role="main" class="content-wrap">
+        <section class="box rounded pt-5">
+            <header class="text-center">
+                <h1 class="h1">
+                    Newsletters
+                </h1>
+                <div class="mt-3">
+                    Select all the newsletters you'd like to receive
+                </div>
+            </header>
+            <div class="content mt-5">
+                <!-- newsletters -->
+                <ul id="newsletters" class="newsletters px-4 px-md-5 pb-4">
+                    <li class="item mb-3">
+                        <a href="#" class="d-flex flex-column flex-md-row p-4 align-items-center rounded" data-name="item">
+                            <figure class="mr-md-4">
+                                <img src="https://fakeimg.pl/800x600/D8D8D8/?text=">
+                            </figure>
+                            <div class="mt-4 mt-md-0">
+                                <h2 class="h2">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                </h2>
+                                <div class="mt-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis viverra nibh cras pulvinar mattis nunc sed blandit libero. Curabitur vitae nunc sed velit dignissim sodales ut eu sem. Quam nulla porttitor massa id neque aliquam. Sed blandit libero volutpat sed cras ornare arcu dui vivamus.
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- form -->
+                <form action="" method="" class="form text-center overflow-hidden">
+                    <div class="box-shadow bg-white mt-3 py-5 rounded-bottom">
+                        <div class="row">
+                            <div class="col-10 offset-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+                                <label for="email" class="d-block">
+                                    <input type="email" name="email" id="email" placeholder="Enter email" class="form-control" required />
+                                </label>
+                                <div class="mt-3">
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block btn-submit text-uppercase">
+                                        <span class="block-submit">
+                                            Subscribe
+                                        </span>
+                                        <span class="block-delay d-none">
+                                            <i class="fas fa-circle-notch fa-spin mr-2"></i>
+                                            Working on it...
+                                        </span>
+                                    </button>
+                                </div>
+                                <label for="optout" class="mt-3">
+                                    <input type="checkbox" name="optout" id="optout">
+                                    <small>I do not want to receive information about future newsletters.</small>
+                                </label>
+                                <div id="form-response" class="mt-4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.1.0/js/all.js?ver=5.4.2"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
